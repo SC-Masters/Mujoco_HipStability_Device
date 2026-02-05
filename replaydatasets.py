@@ -1,0 +1,17 @@
+import numpy as np
+from loco_mujoco.task_factories import ImitationFactory, LAFAN1DatasetConf, DefaultDatasetConf, AMASSDatasetConf, CustomDatasetConf
+
+
+# # example --> you can add as many datasets as you want in the lists!
+env = ImitationFactory.make("SkeletonMuscle",
+                              default_dataset_conf=DefaultDatasetConf(["walk"]),
+                             # lafan1_dataset_conf=LAFAN1DatasetConf(["new_trajectory.npz"]),
+                             # custom_dataset_conf=CustomDatasetConf(["new_trajectory.npz"]),
+                            # if SMPL and AMASS are installed, you can use the following:
+                            #  amass_dataset_conf=AMASSDatasetConf(["C:/Users/Masked Gentleman/PycharmProjects/PythonProject/.venv/Lib/site-packages/loco_mujoco/datasets/amass/Capoeira_Theodoros_v2.c3d"]),
+                            #                                     "KIT/12/WalkInClockwiseCircle11_poses",
+                            #                                     "HUMAN4D/HUMAN4D/Subject3_Medhi/INF_JumpingJack_S3_01_poses",
+                            #                                     'KIT/359/walking_fast05_poses']),
+                            n_substeps=20)
+
+env.play_trajectory(n_episodes=3, n_steps_per_episode=500, render=True)
