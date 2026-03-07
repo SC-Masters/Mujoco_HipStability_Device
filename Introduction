@@ -1,0 +1,13 @@
+Firstly, special thanks to all the contributors to the papers written and to Mujoco and Loco-Mujoco for the amazing work in scripting and simulation
+
+Secondly, thank you Dr. Zhang and University of Alabama for giving my the direction and education necessary to proceed with this idea
+
+The work done here is a collection of scripts written with help of Loco-Mujoco's own code and repository and dataset scheme to produce a simulation of a hip stability device for older adults
+
+The device is intended for those with injury or disability/muscle weakness of 50-75 both male and female
+
+The intent of the work here is to simulate a perturbation about the CoM at the toe off or initial contact stages of gait to represent improper weight shift
+
+The goal from there is to produce a counter angular momentum to the body and help the leg to be repositioned inside the Margin of Stability to allow for a more stable body and easier recovery during the intial stages of a fall
+
+The work is done with the framework of Loco-Mujoco, my understanding of the papers read and python and for body kinetics and kinematics along with system control
